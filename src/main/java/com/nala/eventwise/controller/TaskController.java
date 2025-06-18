@@ -94,4 +94,13 @@ public class TaskController {
         eventRepository.deleteById(eventId);
         return ResponseEntity.ok("Event deleted");
     }
+
+    // Get endpoint to Fetch Task by ID
+    @GetMapping("/{taskId}")
+    public ResponseEntity<Task> getTaskById(@PathVariable Long taskId) {
+        Task task = taskRepository.findById(taskId).orElseThrow();
+        return ResponseEntity.ok(task);
+    }
+
+
 }

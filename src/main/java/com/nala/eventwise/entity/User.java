@@ -3,6 +3,7 @@ package com.nala.eventwise.entity;
 import jakarta.persistence.*;
 
 @Entity
+@Table(name = "users")
 public class User {
 
     @Id

@@ -17,7 +17,7 @@ public class Task {
 
     @ManyToOne
     @JoinColumn(name = "event_id")
-    @JsonIgnore  // Prevent infinite loop
+    @JsonIgnore
     private Event event;
 
     // Getters and Setters
