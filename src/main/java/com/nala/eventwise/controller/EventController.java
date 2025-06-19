@@ -48,6 +48,7 @@ public class EventController {
             map.put("name", event.getName());
             map.put("description", event.getDescription());
             map.put("imageUrl", event.getImageUrl());
+            map.put("date", event.getDate());
             eventMaps.add(map);
         }
         return eventMaps;
@@ -84,6 +85,7 @@ public class EventController {
         map.put("name", event.getName());
         map.put("description", event.getDescription());
         map.put("imageUrl", event.getImageUrl());
+        map.put("date", event.getDate());
 
         return ResponseEntity.ok(map);
     }
@@ -102,6 +104,7 @@ public class EventController {
         event.setName(updatedEvent.getName());
         event.setDescription(updatedEvent.getDescription());
         event.setImageUrl(updatedEvent.getImageUrl());
+        event.setDate(updatedEvent.getDate());
 
         eventRepository.save(event);
 

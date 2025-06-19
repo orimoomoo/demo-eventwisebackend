@@ -1,6 +1,8 @@
 package com.nala.eventwise.entity;
 
 import jakarta.persistence.*;
+
+import java.util.Date;
 import java.util.List;
 
 @Entity
@@ -13,6 +15,7 @@ public class Event {
     private String name;
     private String description;
     private String imageUrl;
+    private Date date;
 
     @ManyToOne
     @JoinColumn(name = "user_id")
@@ -33,6 +36,9 @@ public class Event {
 
     public String getImageUrl() { return imageUrl; }
     public void setImageUrl(String imageUrl) { this.imageUrl = imageUrl; }
+
+    public Date getDate() { return date; }
+    public void setDate(Date date) { this.date = date; }
 
     public User getUser() { return user; }
     public void setUser(User user) { this.user = user; }
